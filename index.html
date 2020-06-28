@@ -26,6 +26,22 @@ body, html {
   min-height: 100%;
 }
 
+/* Cut text with fixed width */
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 100%;
+  white-space: nowrap;
+}
+	
+/* Google Maps */
+#map {
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
+  height: 250px;
+  width: 100%;
+}
+
 .w3-bar .w3-button {
   padding: 16px;
 }
@@ -64,12 +80,20 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-black" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">WE ARE ASPIRE</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">WE ARE ASPIRE</span><br>
-    <span class="w3-large">Discover software solutions for non-invasive ASL perfusion MRI today</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  <div class="w3-display-bottomleft w3-text-black" style="padding:50px 50px 150px 50px">
+	  
+	<!-- Normal -->
+	<span class="w3-jumbo w3-hide-small w3-opacity w3-white" style="padding:5px 12px 5px 12px;">WE ARE ASPIRE</span><br>
+	<!-- Mobile -->
+	<span class="w3-xxlarge w3-hide-large w3-hide-medium w3-opacity w3-white" style="padding:5px 12px 5px 12px;">WE ARE ASPIRE</span><br>
+	<!-- Normal -->
+	<span class="w3-large w3-hide-small w3-opacity w3-white" style="padding:2px 7px 2px 7px;">Discover software solutions for non-invasive ASL perfusion MRI today</span>
+    	<!-- Mobile -->
+	<span class="w3-large w3-hide-large w3-hide-medium w3-opacity w3-white" style="padding:2px 7px 2px 7px;">Discover ASL perfusion MRI</span>
+	
+	<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
   </div> 
+	
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -78,6 +102,7 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
+	
 </header>
 
 <!-- About Section -->
@@ -90,26 +115,29 @@ body, html {
     combined with scanner calibration, physiological atlas comparison, and artificial intelligence (AI)-based diagnostic support.
     The technique will simplify the diagnostic process, reduce cost and patient risk.</p></div>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
+    
+  <!-- SYMBOLS -->
     <div class="w3-quarter">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Software Solutions</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>Provided services of ASPIRE will include medical image data management, image data evaluation as well as study-individual set-ups for clinical trials and diagnosis.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-cloud w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Cloud Application</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>ASPIRE services will be available on the secure mTRIAL platform as cloud applications, making them easily accessible. The app usage will be possible for advanced users and beginners.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Biomarker</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>ASPIRE will offer ASL dementia biomarker software for the support and assessment of researchers as well as clinical experts within clinical trials and for diagnosis.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">ASL Phantom</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>To ensure high quality results, inter-scanner comparability, optimized scanner profiles as well as the validity of the ASL biomarker, ASL scanner calibration and services will be performed by leading phantom experts. </p>
     </div>
+	  
   </div>
 </div>
 
@@ -135,10 +163,11 @@ body, html {
   <!--<p class="w3-center w3-large">The ones who runs this company</p>-->
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l4 m6 w3-margin-bottom">
+	    
       <div class="w3-card">
-        <img src="./images/mediri_logo.png" alt="John" style="width:100%">
+        <img src="./images/mediri_logo.png" alt="John" style="width:80%; padding-left:15%;">
         <div class="w3-container">
-          <h3>mediri GmbH</h3>
+	<div class="cut-text"><h3>mediri GmbH</h3></div>
           <p class="w3-opacity">Clinical Trial Experts</p>
           <div style="min-height:150px;">
           <p>mediri offers reliable and innovative solutions in the field of Medical Imaging. Your questions and challenges – our answers and solutions.</p>
@@ -147,11 +176,12 @@ body, html {
         </div>
       </div>
     </div>
+	  
     <div class="w3-col l4 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="./images/vumc_logo.png" alt="Jane" style="width:100%">
+        <img src="./images/vumc_logo.png" alt="Jane" style="width:80%; padding-left:15%;">
         <div class="w3-container">
-          <h3>VUmc Amsterdam</h3>
+	<div class="cut-text"><h3>VUmc Amsterdam</h3></div>
           <p class="w3-opacity">Biomarker Experts</p>
           <div style="min-height:150px;">
           <p>VU University Medical Center is the embodiment of distinctive patient care, excellence in higher education, and ground-breaking research.</p>
@@ -160,11 +190,12 @@ body, html {
         </div>
       </div>
     </div>
+	  
     <div class="w3-col l4 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="./images/gsp_logo.png" alt="Mike" style="width:100%">
+        <img src="./images/gsp_logo.png" alt="Mike" style="width:80%; padding-left:15%;">
         <div class="w3-container">
-          <h3>Gold Standard Phantoms</h3>
+	<div class="cut-text"><h3>Gold Standard Phantoms</h3></div>
           <p class="w3-opacity">Phantom Experts</p>
           <div style="min-height:150px;">
           <p>Gold Standard Phantoms is a University College London's Institute of Neurology spinout company which is developing, marketing and selling calibration services for Quantitative Medical Imaging.</p>
@@ -173,26 +204,27 @@ body, html {
         </div>
       </div>
     </div>
+	  
   </div>
 </div>
 
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Partners
+    <span class="w3-xxlarge">3</span>
+    <br>Teams
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
-    <br>Projects Done
+    <span class="w3-xxlarge">10</span>
+    <br>Patents
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
-    <br>Happy Clients
+    <span class="w3-xxlarge">12+</span>
+    <br>Contributors
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Meetings
+    <span class="w3-xxlarge">141+</span>
+    <br>ASL related Publications
   </div>
 </div>
 
@@ -214,6 +246,21 @@ body, html {
 	    </div>
 	  </div>
 	</div>
+	
+	<div class="w3-container" style="padding:32px 16px">
+	  <div class="w3-row-padding">
+	    <div class="w3-col m6">
+	      <a href="https://mediri.com/en/news/2019/mediri-ehealth-congress-frankfurtmain" target="_blank">
+	      <h3>WHITEBOX:</h3></a>
+	      <div style="max-width: 90%;"><p>WHITEBOX connects clinics and radiological pratices to a secure platform which allows automated AI-supported analysis of medical image data for diagnosis support.
+		      A patent has been filed to protect the inherent data security concept.
+		      The development of this innovative product is supported by the German Federal Ministry for Economic Affairs and Energy.</p></div>
+	    </div>
+	    <div class="w3-col m6">
+	      <img class="w3-image w3-round-large w3-hover-opacity" src="./images/whitebox.jpg" onclick="onClick(this)" alt="WHITEBOX" width="700" height="394">
+	    </div>
+	  </div>
+	</div>
 
 	<div class="w3-container" style="padding:32px 16px">
 	  <div class="w3-row-padding">
@@ -229,7 +276,7 @@ body, html {
 	  </div>
 	</div>
 
-	<div class="w3-container" style="padding:32px 16px">
+	<div class="w3-container" style="padding:32px 16px 0px 16px"> <!-- Less padding on the bottom -->
 	  <div class="w3-row-padding">
 	    <div class="w3-col m6">
 	      <a href="https://www.goldstandardphantoms.com/qasper" target="_blank">
@@ -257,28 +304,84 @@ body, html {
 <!-- Skills Section -->
 <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
-	  
-    <div class="w3-col m6"> 
-      <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
+
+    <div class="w3-container" style="padding:32px 16px">
+    <div class="w3-col m6">
+      <h3>Prof. Dr. Matthias Günther, CEO</h3>
+      <div style="max-width: 90%;"><p>Matthias is a Professor for MR-Physics at the University of Bremen.
+	       				He is the current CEO of the mediri GmbH, and contributes over 15 years’ 
+	      				experience of R&D in the field of ASL-MRI.
+	      				</p></div>
+      <p><a href="https://www.researchgate.net/profile/Matthias_Guenther" target="_blank" class="w3-button w3-black"><i class="fa fa-th"> </i> View On Researchgate</a></p>
     </div>
 	  
     <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+      <p class="w3-wide"><i class="fa fa-file-text-o w3-margin-right"></i>Publications</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:52%">156</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Reads</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:44%">13,176</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Citations</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:44%">4,831</div>
       </div>  
+    </div>
+    </div>
+
+    <div class="w3-container" style="padding:32px 16px">
+    <div class="w3-col m6">
+      <h3>Prof. Dr. Xavier Golay, CEO</h3>
+      <div style="max-width: 90%;"><p>Xavier is a Professor of MRI Physics at UCL.
+				  He is the current CEO of GSP, and contributes over
+				  20 years’ experience of R&D in the field of MRI, 
+				  from new imaging techniques to the development of contrast agents.</p></div>
+      <p><a href="https://www.researchgate.net/profile/Xavier_Golay" target="_blank" class="w3-button w3-black"><i class="fa fa-th"> </i> View On Researchgate</a></p>
+    </div>
+	  
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-file-text-o w3-margin-right"></i>Publications</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:93%">291</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Reads</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:87%">26,099</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Citations</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:97%">10,723</div>
+      </div>  
+    </div>
+    </div>
+	    
+    <div class="w3-container" style="padding:32px 16px">
+    <div class="w3-col m6">
+      <h3>Dr. Henk Mutsaerts, Assistant Prof.</h3>
+      <div style="max-width: 90%;"><p>Henk Mutsaerts is a medical doctor with a passion for image processing.
+				  His research focuses on the development of arterial spin labeling (ASL) perfusion 
+				  MRI as clinical biomarker in aging and aging-related disease. His research is 
+				  stratified in three trajectories: 1) standardization, 2) differentiation and 3) 
+				  application of ASL as a biomarker of cognitive decline.</p></div>
+      <p><a href="https://www.researchgate.net/profile/Henri_Mutsaerts" target="_blank" class="w3-button w3-black"><i class="fa fa-th"> </i> View On Researchgate</a></p>
+    </div>
+	  
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-file-text-o w3-margin-right"></i>Publications</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:20%">58</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Reads</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:16%">4,660</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Citations</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:1%">590</div>
+      </div>  
+    </div>
     </div>
 	  
   </div>
@@ -308,40 +411,65 @@ body, html {
 	<div class="w3-row-padding" style="margin-top:64px">
 	    <div class="w3-col l4 m6 w3-margin-bottom">
 	      <div class="w3-card w3-white">
-	        <img src="./images/mediri_logo.png" alt="MEDIRI" style="width:100%">
-	        <div class="w3-container">
-	          <h3>mediri GmbH</h3>
+	        <img src="./images/mediri_logo.png" alt="MEDIRI" style="width:80%; padding-left:15%;">
+	        <div class="w3-container">	
+		<div class="cut-text"><h3>mediri GmbH</h3></div>
 	          <div style="min-height:160px;">
 	          	<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Heidelberg, Germany</p>
 			    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +49 6221 725 6970</p>
-			    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@mediri.com</p>
+			    <div class="cut-text"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@mediri.com</div>
 	          </div>
+			
+		  <div id="map">
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10384.844360868232!2d8.6569667024249!3d49.40491363387601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797c0d67f6d1037%3A0xd20992b23843b7b7!2sEppelheimer%20Str.%2013%2C%2069115%20Heidelberg!5e0!3m2!1sde!2sde!4v1592567355913!5m2!1sde!2sde"
+			width="100%" height="250px" 
+			frameborder="0" style="border:0;" 
+			allowfullscreen="" aria-hidden="false" 
+			tabindex="0"></iframe>
+		  </div>
+			
 	        </div>
 	      </div>
 	    </div>
 	    <div class="w3-col l4 m6 w3-margin-bottom">
 	      <div class="w3-card w3-white">
-	        <img src="./images/vumc_logo.png" alt="VUMC" style="width:100%">
+	        <img src="./images/vumc_logo.png" alt="VUMC" style="width:80%; padding-left:15%;">
 	        <div class="w3-container">
-	          <h3>VUmc Amsterdam</h3>
+		<div class="cut-text"><h3>VUmc Amsterdam</h3></div>
 	          <div style="min-height:160px;">
 	          	<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Amsterdam, Netherlands</p>
-			    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: None</p>
-			    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: None</p>
+			<div class="cut-text"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: henkjanmutsaerts@gmail.com</div>
 	          </div>
+		
+		  <div id="map">
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.888977175265!2d4.8568910158006355!3d52.33616017977982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e1e2c3698a61%3A0x595abf41bfccdee!2sAmsterdam%20UMC%2C%20locatie%20VUmc!5e0!3m2!1sde!2sde!4v1592567874418!5m2!1sde!2sde" 
+			  width="100%" height="250px" 
+			  frameborder="0" style="border:0;" 
+			  allowfullscreen="" aria-hidden="false" 
+			  tabindex="0"></iframe>
+		  </div>
+			
 	        </div>
 	      </div>
 	    </div>
 	    <div class="w3-col l4 m6 w3-margin-bottom">
 	      <div class="w3-card w3-white">
-	        <img src="./images/gsp_logo.png" alt="GSP" style="width:100%">
+	        <img src="./images/gsp_logo.png" alt="GSP" style="width:80%; padding-left:15%;">
 	        <div class="w3-container">
-	          <h3>Gold Standard Phantoms</h3>
+		<div class="cut-text"><h3>Gold Standard Phantoms</h3></div>
 	          <div style="min-height:160px;">
 	          	<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> London, UK</p>
-			    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: None</p>
-			    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@goldstandardphantoms.com</p>
-	          </div>
+	                <div class="cut-text"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@goldstandardphantoms.com</div>
+		  </div>
+		
+		  <div id="map">
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9920.406407119566!2d-0.13129439664073836!3d51.566370914201066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ba34458a517%3A0x6eaa98249d2a3b0!2sBelgravia%20Workshops%2C%20159-163%20Marlborough%20Rd%2C%20London%20N19%204NF%2C%20Vereinigtes%20K%C3%B6nigreich!5e0!3m2!1sde!2sde!4v1592567757250!5m2!1sde!2sde" 
+			  width="100%" height="250px" 
+			  frameborder="0" style="border:0;" 
+			  allowfullscreen="" aria-hidden="false" 
+			  tabindex="0"></iframe>
+		  </div>
+			
 	        </div>
 	      </div>
 	    </div>
