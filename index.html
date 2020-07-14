@@ -17,7 +17,9 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 /* Assign map height and width */
-#map_mediri { height: 180px; width: 180px; }
+#map_mediri { height: 250px; width: 100%; }
+#map_vumc { height: 250px; width: 100%; }
+#map_gsp { height: 250px; width: 100%; }
 
 body, html {
   height: 100%;
@@ -516,7 +518,7 @@ body, html {
  
 <script>
 	
-// Initialize the map
+// MAP MEDIRI
 var map = L.map('map_mediri').setView([42.35, -71.08], 13);
 // Load a tile layer
 L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
