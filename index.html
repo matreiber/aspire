@@ -526,6 +526,11 @@ var map3 = L.map('map_gsp').setView([51.566234, -0.122275], 15);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 'attribution':  'Kartendaten &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende',
 'useCache': true}).addTo(map3);
+
+// Markers
+var marker1 = L.marker([49.40488770, 8.66570698]).addTo(map1);
+var marker2 = L.marker([52.33463200, 4.85991074]).addTo(map2);
+var marker3 = L.marker([51.566234, -0.122275]).addTo(map3);
 	
 	
 // Modal Image Gallery
