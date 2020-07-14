@@ -460,13 +460,7 @@ body, html {
 			<div class="cut-text"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: henkjanmutsaerts@gmail.com</div>
 	          </div>
 		
-		  <div id="map">
-		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.888977175265!2d4.8568910158006355!3d52.33616017977982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e1e2c3698a61%3A0x595abf41bfccdee!2sAmsterdam%20UMC%2C%20locatie%20VUmc!5e0!3m2!1sde!2sde!4v1592567874418!5m2!1sde!2sde" 
-			  width="100%" height="250px" 
-			  frameborder="0" style="border:0;" 
-			  allowfullscreen="" aria-hidden="false" 
-			  tabindex="0"></iframe>
-		  </div>
+		  <div id="map_vumc"></div>
 			
 	        </div>
 	      </div>
@@ -481,13 +475,7 @@ body, html {
 	                <div class="cut-text"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@goldstandardphantoms.com</div>
 		  </div>
 		
-		  <div id="map">
-		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9920.406407119566!2d-0.13129439664073836!3d51.566370914201066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ba34458a517%3A0x6eaa98249d2a3b0!2sBelgravia%20Workshops%2C%20159-163%20Marlborough%20Rd%2C%20London%20N19%204NF%2C%20Vereinigtes%20K%C3%B6nigreich!5e0!3m2!1sde!2sde!4v1592567757250!5m2!1sde!2sde" 
-			  width="100%" height="250px" 
-			  frameborder="0" style="border:0;" 
-			  allowfullscreen="" aria-hidden="false" 
-			  tabindex="0"></iframe>
-		  </div>
+		  <div id="map_gsp"></div>
 			
 	        </div>
 	      </div>
@@ -522,8 +510,25 @@ body, html {
 var map = L.map('map_mediri').setView([42.35, -71.08], 13);
 // Load a tile layer
 L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-{
-      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+{ attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+}).addTo(map);
+
+// MAP VUMC
+var map = L.map('map_vumc').setView([42.35, -71.08], 13);
+// Load a tile layer
+L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+{ attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+}).addTo(map);
+
+// MAP GSP
+var map = L.map('map_gsp').setView([42.35, -71.08], 13);
+// Load a tile layer
+L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+{ attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
       maxZoom: 17,
       minZoom: 9
 }).addTo(map);
