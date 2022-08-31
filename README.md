@@ -5,5 +5,5 @@
 * #### Temporary URL: https://michaelstritt.github.io/aspire/
 * #### Template: https://www.w3schools.com/w3css/tryw3css_templates_startup.htm
 * #### Images: https://unsplash.com/
-* #### URL: http://aspire-mri.eu/
+* #### URL: https://aspire-mri.eu/
 * #### more to come...
